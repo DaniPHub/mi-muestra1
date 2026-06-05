@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #e0e7ff,
+        #c7d2fe
+    );
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+.container{
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    background:#ffffff;
+    padding:30px;
+    border-radius:20px;
+
+    border:2px solid #6366f1;
+
+    box-shadow:
+        0 0 15px #6366f1,
+        0 0 30px #6366f1,
+        0 0 60px rgba(99,102,241,.7);
+
+    transition:.3s;
+}
+
+.container:hover{
+    box-shadow:
+        0 0 20px #6366f1,
+        0 0 40px #6366f1,
+        0 0 80px rgba(99,102,241,.8);
+}
+
+/* =========================
+   TITULOS
+========================= */
+h1,
+h2{
+    text-align:center;
+    color:#4338ca;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+h1{
+    font-size:2.2rem;
+}
+
+h2{
+    font-size:1.8rem;
+}
+
+/* =========================
+   FIELDSETS
+========================= */
+fieldset{
+    border:none;
+    background:#f8fafc;
+    border-left:6px solid #6366f1;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+legend{
+    color:#4338ca;
+    font-weight:700;
+    padding:0 10px;
+}
+
+/* =========================
+   LABELS
+========================= */
+label{
+    display:block;
+    margin-bottom:6px;
+    color:#334155;
+    font-weight:500;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input[type="text"],
+select{
+    width:100%;
+    padding:14px;
+    border:2px solid #e2e8f0;
+    border-radius:12px;
+    font-size:15px;
+    transition:.3s;
+    margin-bottom:15px;
+}
+
+input[type="text"]:focus,
+select:focus{
+    outline:none;
+    border-color:#6366f1;
+    box-shadow:0 0 12px rgba(99,102,241,.2);
+}
+
+/* =========================
+   CHECKBOX Y RADIO
+========================= */
+input[type="checkbox"],
+input[type="radio"]{
+    margin-right:8px;
+    transform:scale(1.1);
+}
+
+/* =========================
+   CURSOS
+========================= */
+.cursos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.cursos label{
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #e2e8f0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cursos label:hover{
+    background:#eef2ff;
+    border-color:#6366f1;
+}
+
+/* =========================
+   BOTONES
+========================= */
+input[type="submit"],
+input[type="reset"]{
+    border:none;
+    padding:14px 25px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+input[type="submit"]{
+    background:#6366f1;
+    color:white;
+}
+
+input[type="submit"]:hover{
+    background:#4f46e5;
+    transform:translateY(-2px);
+}
+
+input[type="reset"]{
+    background:#e2e8f0;
+    color:#334155;
+    margin-left:10px;
+}
+
+input[type="reset"]:hover{
+    background:#cbd5e1;
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+.resultado{
+    max-width:500px;
+    margin:auto;
+    background:#f8fafc;
+    padding:30px;
+    border-radius:20px;
+
+    border:2px solid #6366f1;
+
+    box-shadow:
+        0 0 15px rgba(99,102,241,.4),
+        0 0 30px rgba(99,102,241,.3),
+        0 0 60px rgba(99,102,241,.2),
+        0 15px 40px rgba(0,0,0,.10);
+
+    animation: brillo 3s infinite ease-in-out;
+}
+
+.resultado p{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px dashed #cbd5e1;
+    color:#334155;
+}
+
+.resultado strong{
+    color:#0f172a;
+}
+
+/* =========================
+   LISTA DE CURSOS
+========================= */
+ul{
+    margin-top:15px;
+    margin-left:25px;
+}
+
+ul li{
+    margin-bottom:8px;
+}
+
+/* =========================
+   LINEA
+========================= */
+hr{
+    border:none;
+    height:1px;
+    background:#e2e8f0;
+    margin:20px 0;
+}
+
+/* =========================
+   TOTAL
+========================= */
+.total{
+    margin-top:20px;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    background:#dcfce7;
+    color:#166534;
+}
+
+/* =========================
+   BOTON VOLVER
+========================= */
+a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    background:#6366f1;
+    color:white;
+    padding:12px 24px;
+    border-radius:12px;
+    transition:.3s;
+    font-weight:600;
+}
+
+a:hover{
+    background:#4f46e5;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   MENSAJE DE ERROR
+========================= */
+.error{
+    background:linear-gradient(
+        135deg,
+        #ff6b6b,
+        #dc2626
+    );
+    color:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:25px;
+    box-shadow:0 12px 25px rgba(220,38,38,.30);
+    animation:aparecer .5s ease;
+}
+
+.error::before{
+    content:"⚠️";
+    display:block;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+/* =========================
+   ANIMACION
+========================= */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+
+    .container{
+        padding:25px;
+    }
+
+    .cursos{
+        grid-template-columns:1fr;
+    }
+
+    .resultado p{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+    }
+
+    input[type="submit"],
+    input[type="reset"]{
+        width:100%;
+        margin-top:10px;
+    }
+
+    input[type="reset"]{
+        margin-left:0;
+    }
+}
